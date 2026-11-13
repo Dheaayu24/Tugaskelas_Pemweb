@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduLearn - Belajar Lebih Mudah</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- ================= HEADER ================= -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+
+        <!-- ================= NAVIGATION ================= -->
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2">
+
+                <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-lg">
+                    E
+                </div>
+
+                <div>
+                    <h1 class="text-xl font-extrabold text-slate-900">
+                        Edu<span class="text-blue-600">Learn</span>
+                    </h1>
+
+                    <p class="text-[10px] text-slate-400 -mt-1">
+                        Learn • Grow • Succeed
+                    </p>
+                </div>
+
+            </a>
+
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+
+                <a href="index.html"
+                   class="text-blue-600 font-semibold">
+                    Beranda
+                </a>
+
+                <a href="courses.html"
+                   class="text-slate-600 hover:text-blue-600 transition">
+                    Kursus
+                </a>
+                    <a href="api.html" class="text-slate-600 hover:text-blue-600 font-medium transition">API Publik</a>
+
+                <a href="#kategori"
+                   class="text-slate-600 hover:text-blue-600 transition">
+                    Kategori
+                </a>
+
+                <a href="#tentang"
+                   class="text-slate-600 hover:text-blue-600 transition">
+                    Tentang
+                </a>
+
+            </div>
+
+
+            <!-- Desktop Login -->
+            <div class="hidden md:flex items-center gap-3">
+
+                <a href="login.html"
+                   class="px-5 py-2.5 text-slate-700 font-semibold hover:text-blue-600 transition">
+                    Masuk
+                </a>
+
+                <a href="register.html"
+                   class="register-button px-5 py-2.5 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition shadow-lg shadow-blue-200">
+                    Daftar
+                </a>
+
+            </div>
+
+
+            <!-- Mobile Button -->
+            <button
+                type="button"
+                class="mobile-menu-button md:hidden text-slate-700 text-2xl"
+                aria-label="Buka menu">
+                ☰
+            </button>
+
+        </nav>
+
+
+        <!-- ================= MOBILE MENU ================= -->
+        <div class="mobile-menu hidden md:hidden border-t border-slate-200 bg-white">
+
+            <div class="px-6 py-4 space-y-3">
+
+                <a href="index.html"
+                   class="block py-2 text-blue-600 font-semibold">
+                    Beranda
+                </a>
+
+                <a href="courses.html"
+                   class="block py-2 text-slate-600 hover:text-blue-600">
+                    Kursus
+                </a>
+
+                <a href="api.html" class="block py-2 text-slate-600 hover:text-blue-600">
+                    API Publik
+                </a>
+
+                <a href="#kategori"
+                   class="block py-2 text-slate-600 hover:text-blue-600">
+                    Kategori
+                </a>
+
+                <a href="#tentang"
+                   class="block py-2 text-slate-600 hover:text-blue-600">
+                    Tentang
+                </a>
+
+                <div class="border-t border-slate-100 pt-3">
+
+                    <a href="login.html"
+                       class="block py-2 text-slate-600">
+                        Masuk
+                    </a>
+
+                    <a href="register.html"
+                       class="register-button block mt-2 px-5 py-2.5 bg-blue-600 text-white rounded-xl text-center font-semibold">
+                        Daftar
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main>
+
+        <!-- ================= HERO SECTION ================= -->
+        <section class="bg-white hero-section">
+
+            <div class="max-w-7xl mx-auto px-6 py-20 lg:py-28">
+
+                <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+                    <!-- Hero Content -->
+                    <div>
+
+                        <div class="inline-flex items-center gap-2 bg-blue-50 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                            🎓 Platform Belajar Online
+                        </div>
+
+
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-slate-900">
+                            Belajar Lebih Mudah,
+                            <span class="text-blue-600">
+                                Raih Masa Depanmu
+                            </span>
+                        </h2>
+
+
+                        <p class="mt-6 text-lg text-slate-500 leading-relaxed max-w-xl">
+                            Tingkatkan kemampuanmu dengan berbagai kursus berkualitas,
+                            instruktur berpengalaman, dan materi pembelajaran yang mudah dipahami.
+                        </p>
+
+
+                        <!-- Search -->
+                        <form
+                            id="homeSearchForm"
+                            class="mt-8 flex flex-col sm:flex-row gap-3 max-w-xl">
+
+                            <div class="flex-1 relative">
+
+                                <span class="absolute left-4 top-3.5 text-slate-400">
+                                    🔍
+                                </span>
+
+                                <input
+                                    id="homeSearch"
+                                    type="search"
+                                    placeholder="Cari kursus yang ingin dipelajari..."
+                                    class="w-full pl-11 pr-4 py-3.5 border border-slate-200 rounded-xl outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                    aria-label="Cari kursus"
+                                >
+
+                            </div>
+
+                            <button
+                                type="submit"
+                                class="px-7 py-3.5 bg-blue-600 text-white rounded-xl font-semibold text-center hover:bg-blue-700 transition shadow-lg shadow-blue-200">
+                                Cari Kursus
+                            </button>
+
+                        </form>
+
+
+                        <!-- Small Information -->
+                        <div class="mt-8 flex flex-wrap gap-6 text-sm text-slate-500">
+
+                            <span>✓ Materi berkualitas</span>
+                            <span>✓ Belajar kapan saja</span>
+                            <span>✓ Akses fleksibel</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Hero Illustration -->
+                    <div class="relative">
+
+                        <div class="bg-blue-600 rounded-3xl p-8 lg:p-10 shadow-2xl shadow-blue-200">
+
+                            <div class="bg-white rounded-2xl p-6 shadow-xl">
+
+                                <header class="flex items-center justify-between mb-6">
+
+                                    <div>
+                                        <p class="text-sm text-slate-400">
+                                            Progress Belajar
+                                        </p>
+
+                                        <h3 class="text-xl font-bold text-slate-900">
+                                            Web Development
+                                        </h3>
+                                    </div>
+
+                                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                                        💻
+                                    </div>
+
+                                </header>
+
+
+                                <!-- Progress -->
+                                <div class="mb-6">
+
+                                    <div class="flex justify-between text-sm mb-2">
+
+                                        <span class="text-slate-500">
+                                            Progress
+                                        </span>
+
+                                        <span class="font-bold text-blue-600">
+                                            75%
+                                        </span>
+
+                                    </div>
+
+                                    <div class="w-full bg-slate-100 rounded-full h-3">
+                                        <div class="bg-blue-600 h-3 rounded-full w-3/4"></div>
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Course Progress -->
+                                <div class="space-y-4">
+
+                                    <article class="flex items-center gap-4 p-3 bg-slate-50 rounded-xl">
+
+                                        <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
+                                            🎨
+                                        </div>
+
+                                        <div class="flex-1">
+
+                                            <p class="font-semibold text-sm">
+                                                UI/UX Design
+                                            </p>
+
+                                            <p class="text-xs text-slate-400">
+                                                12 Materi
+                                            </p>
+
+                                        </div>
+
+                                        <span class="text-green-500 text-sm">
+                                            ✓
+                                        </span>
+
+                                    </article>
+
+
+                                    <article class="flex items-center gap-4 p-3 bg-slate-50 rounded-xl">
+
+                                        <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                                            🧠
+                                        </div>
+
+                                        <div class="flex-1">
+
+                                            <p class="font-semibold text-sm">
+                                                Digital Marketing
+                                            </p>
+
+                                            <p class="text-xs text-slate-400">
+                                                18 Materi
+                                            </p>
+
+                                        </div>
+
+                                        <span class="text-blue-600 text-sm font-semibold">
+                                            65%
+                                        </span>
+
+                                    </article>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Achievement Card -->
+                        <aside class="absolute -bottom-6 -left-4 md:-left-8 bg-white rounded-2xl shadow-xl p-4 flex items-center gap-3">
+
+                            <div class="w-11 h-11 bg-green-100 rounded-full flex items-center justify-center">
+                                🏆
+                            </div>
+
+                            <div>
+
+                                <p class="text-xs text-slate-400">
+                                    Pencapaian
+                                </p>
+
+                                <p class="font-bold text-slate-900">
+                                    Sertifikat Baru!
+                                </p>
+
+                            </div>
+
+                        </aside>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STATISTICS ================= -->
+        <section class="bg-blue-600" aria-label="Statistik EduLearn">
+
+            <div class="max-w-7xl mx-auto px-6 py-10">
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+
+                    <article>
+                        <h3 class="text-3xl font-extrabold">
+                            10K+
+                        </h3>
+                        <p class="text-blue-100 text-sm mt-1">
+                            Pelajar Aktif
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3 class="text-3xl font-extrabold">
+                            250+
+                        </h3>
+                        <p class="text-blue-100 text-sm mt-1">
+                            Kursus
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3 class="text-3xl font-extrabold">
+                            80+
+                        </h3>
+                        <p class="text-blue-100 text-sm mt-1">
+                            Instruktur
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3 class="text-3xl font-extrabold">
+                            95%
+                        </h3>
+                        <p class="text-blue-100 text-sm mt-1">
+                            Kepuasan Pelajar
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= KATEGORI ================= -->
+        <section id="kategori" class="py-20">
+
+            <div class="max-w-7xl mx-auto px-6">
+
+                <header class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+
+                    <div>
+
+                        <p class="text-blue-600 font-semibold mb-2">
+                            KATEGORI
+                        </p>
+
+                        <h2 class="text-3xl font-extrabold text-slate-900">
+                            Pilih Bidang yang Kamu Sukai
+                        </h2>
+
+                        <p class="text-slate-500 mt-2">
+                            Temukan kursus sesuai minat dan tujuanmu.
+                        </p>
+
+                    </div>
+
+                    <a href="courses.html"
+                       class="text-blue-600 font-semibold hover:text-blue-700">
+                        Lihat Semua →
+                    </a>
+
+                </header>
+
+
+                <!-- Category Cards -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+
+                    <article>
+
+                        <a href="courses.html?category=programming"
+                           class="block bg-white border border-slate-200 rounded-2xl p-6 hover:-translate-y-1 hover:shadow-xl hover:border-blue-200 transition">
+
+                            <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-xl mb-4">
+                                💻
+                            </div>
+
+                            <h3 class="font-bold text-slate-900">
+                                Programming
+                            </h3>
+
+                            <p class="text-sm text-slate-400 mt-1">
+                                45 Kursus
+                            </p>
+
+                        </a>
+
+                    </article>
+
+
+                    <article>
+
+                        <a href="courses.html?category=design"
+                           class="block bg-white border border-slate-200 rounded-2xl p-6 hover:-translate-y-1 hover:shadow-xl hover:border-purple-200 transition">
+
+                            <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-xl mb-4">
+                                🎨
+                            </div>
+
+                            <h3 class="font-bold text-slate-900">
+                                Design
+                            </h3>
+
+                            <p class="text-sm text-slate-400 mt-1">
+                                32 Kursus
+                            </p>
+
+                        </a>
+
+                    </article>
+
+
+                    <article>
+
+                        <a href="courses.html?category=bisnis"
+                           class="block bg-white border border-slate-200 rounded-2xl p-6 hover:-translate-y-1 hover:shadow-xl hover:border-green-200 transition">
+
+                            <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-xl mb-4">
+                                📈
+                            </div>
+
+                            <h3 class="font-bold text-slate-900">
+                                Bisnis
+                            </h3>
+
+                            <p class="text-sm text-slate-400 mt-1">
+                                28 Kursus
+                            </p>
+
+                        </a>
+
+                    </article>
+
+
+                    <article>
+
+                        <a href="courses.html?category=digital-marketing"
+                           class="block bg-white border border-slate-200 rounded-2xl p-6 hover:-translate-y-1 hover:shadow-xl hover:border-orange-200 transition">
+
+                            <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-xl mb-4">
+                                📱
+                            </div>
+
+                            <h3 class="font-bold text-slate-900">
+                                Digital Marketing
+                            </h3>
+
+                            <p class="text-sm text-slate-400 mt-1">
+                                24 Kursus
+                            </p>
+
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= KURSUS POPULER ================= -->
+        <section class="bg-white py-20">
+
+            <div class="max-w-7xl mx-auto px-6">
+
+                <header class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+
+                    <div>
+
+                        <p class="text-blue-600 font-semibold mb-2">
+                            KURSUS POPULER
+                        </p>
+
+                        <h2 class="text-3xl font-extrabold text-slate-900">
+                            Belajar Skill yang Banyak Dicari
+                        </h2>
+
+                        <p class="text-slate-500 mt-2">
+                            Kursus pilihan yang paling banyak diminati pelajar.
+                        </p>
+
+                    </div>
+
+                    <a href="courses.html"
+                       class="text-blue-600 font-semibold">
+                        Lihat Semua →
+                    </a>
+
+                </header>
+
+
+                <!-- Course Cards -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+
+
+                    <!-- Course 1 -->
+                    <article class="bg-white border border-slate-200 rounded-2xl overflow-hidden hover:-translate-y-1 hover:shadow-xl transition">
+
+                        <div class="h-44 bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-6xl">
+                            💻
+                        </div>
+
+                        <div class="p-5">
+
+                            <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
+                                Programming
+                            </span>
+
+                            <h3 class="text-lg font-bold mt-4 text-slate-900">
+                                Dasar-Dasar Web Development
+                            </h3>
+
+                            <p class="text-sm text-slate-500 mt-2">
+                                Pelajari HTML, CSS, dan JavaScript dari dasar.
+                            </p>
+
+                            <div class="flex items-center gap-3 mt-4 text-sm">
+
+                                <span class="text-yellow-500">
+                                    ★ 4.9
+                                </span>
+
+                                <span class="text-slate-400">
+                                    • 1.2K Pelajar
+                                </span>
+
+                            </div>
+
+                            <div class="flex items-center justify-between mt-5 pt-4 border-t border-slate-100">
+
+                                <span class="font-extrabold text-slate-900">
+                                    Gratis
+                                </span>
+
+                                <a href="course-detail.html"
+                                   class="text-blue-600 font-semibold text-sm">
+                                    Pelajari →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Course 2 -->
+                    <article class="bg-white border border-slate-200 rounded-2xl overflow-hidden hover:-translate-y-1 hover:shadow-xl transition">
+
+                        <div class="h-44 bg-gradient-to-br from-purple-500 to-pink-400 flex items-center justify-center text-6xl">
+                            🎨
+                        </div>
+
+                        <div class="p-5">
+
+                            <span class="text-xs font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">
+                                Design
+                            </span>
+
+                            <h3 class="text-lg font-bold mt-4 text-slate-900">
+                                UI/UX Design untuk Pemula
+                            </h3>
+
+                            <p class="text-sm text-slate-500 mt-2">
+                                Belajar membuat desain aplikasi yang menarik.
+                            </p>
+
+                            <div class="flex items-center gap-3 mt-4 text-sm">
+
+                                <span class="text-yellow-500">
+                                    ★ 4.8
+                                </span>
+
+                                <span class="text-slate-400">
+                                    • 980 Pelajar
+                                </span>
+
+                            </div>
+
+                            <div class="flex items-center justify-between mt-5 pt-4 border-t border-slate-100">
+
+                                <span class="font-extrabold text-slate-900">
+                                    Rp49.000
+                                </span>
+
+                                <a href="course-detail.html"
+                                   class="text-blue-600 font-semibold text-sm">
+                                    Pelajari →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Course 3 -->
+                    <article class="bg-white border border-slate-200 rounded-2xl overflow-hidden hover:-translate-y-1 hover:shadow-xl transition">
+
+                        <div class="h-44 bg-gradient-to-br from-orange-500 to-yellow-400 flex items-center justify-center text-6xl">
+                            📈
+                        </div>
+
+                        <div class="p-5">
+
+                            <span class="text-xs font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full">
+                                Bisnis
+                            </span>
+
+                            <h3 class="text-lg font-bold mt-4 text-slate-900">
+                                Digital Marketing Dasar
+                            </h3>
+
+                            <p class="text-sm text-slate-500 mt-2">
+                                Kuasai strategi marketing di era digital.
+                            </p>
+
+                            <div class="flex items-center gap-3 mt-4 text-sm">
+
+                                <span class="text-yellow-500">
+                                    ★ 4.9
+                                </span>
+
+                                <span class="text-slate-400">
+                                    • 850 Pelajar
+                                </span>
+
+                            </div>
+
+                            <div class="flex items-center justify-between mt-5 pt-4 border-t border-slate-100">
+
+                                <span class="font-extrabold text-slate-900">
+                                    Rp59.000
+                                </span>
+
+                                <a href="course-detail.html"
+                                   class="text-blue-600 font-semibold text-sm">
+                                    Pelajari →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TENTANG ================= -->
+        <section id="tentang" class="py-20">
+
+            <div class="max-w-7xl mx-auto px-6">
+
+                <div class="bg-slate-900 rounded-3xl px-8 py-14 md:px-14 text-white">
+
+                    <div class="grid md:grid-cols-2 gap-10 items-center">
+
+                        <div>
+
+                            <p class="text-blue-400 font-semibold mb-3">
+                                TENTANG EDULEARN
+                            </p>
+
+                            <h2 class="text-3xl md:text-4xl font-extrabold">
+                                Belajar Tanpa Batas,
+                                Kembangkan Potensimu.
+                            </h2>
+
+                            <p class="text-slate-400 mt-5 leading-relaxed">
+                                EduLearn hadir untuk membantu siapa saja mendapatkan
+                                akses pembelajaran yang mudah, fleksibel, dan berkualitas.
+                                Belajar skill baru kapan saja dan di mana saja.
+                            </p>
+
+                            <a href="courses.html"
+                               class="inline-block mt-7 px-6 py-3 bg-blue-600 rounded-xl font-semibold hover:bg-blue-700 transition">
+                                Mulai Belajar
+                            </a>
+
+                        </div>
+
+
+                        <div class="grid grid-cols-2 gap-4">
+
+                            <article class="bg-white/10 rounded-2xl p-6">
+
+                                <div class="text-3xl mb-3">
+                                    📚
+                                </div>
+
+                                <h3 class="font-bold">
+                                    Materi Lengkap
+                                </h3>
+
+                                <p class="text-sm text-slate-400 mt-2">
+                                    Materi disusun secara terstruktur.
+                                </p>
+
+                            </article>
+
+
+                            <article class="bg-white/10 rounded-2xl p-6">
+
+                                <div class="text-3xl mb-3">
+                                    👨‍🏫
+                                </div>
+
+                                <h3 class="font-bold">
+                                    Instruktur
+                                </h3>
+
+                                <p class="text-sm text-slate-400 mt-2">
+                                    Belajar bersama instruktur berpengalaman.
+                                </p>
+
+                            </article>
+
+
+                            <article class="bg-white/10 rounded-2xl p-6">
+
+                                <div class="text-3xl mb-3">
+                                    🏆
+                                </div>
+
+                                <h3 class="font-bold">
+                                    Sertifikat
+                                </h3>
+
+                                <p class="text-sm text-slate-400 mt-2">
+                                    Dapatkan sertifikat setelah menyelesaikan kursus.
+                                </p>
+
+                            </article>
+
+
+                            <article class="bg-white/10 rounded-2xl p-6">
+
+                                <div class="text-3xl mb-3">
+                                    📱
+                                </div>
+
+                                <h3 class="font-bold">
+                                    Fleksibel
+                                </h3>
+
+                                <p class="text-sm text-slate-400 mt-2">
+                                    Belajar kapan saja dan di mana saja.
+                                </p>
+
+                            </article>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CALL TO ACTION ================= -->
+        <section class="bg-blue-600">
+
+            <div class="max-w-4xl mx-auto px-6 py-16 text-center text-white">
+
+                <h2 class="text-3xl md:text-4xl font-extrabold">
+                    Siap Mulai Perjalanan Belajarmu?
+                </h2>
+
+                <p class="text-blue-100 mt-4">
+                    Bergabunglah bersama ribuan pelajar lainnya dan mulai tingkatkan skill-mu hari ini.
+                </p>
+
+                <a href="register.html"
+                   class="register-button inline-block mt-7 px-8 py-3.5 bg-white text-blue-600 rounded-xl font-bold hover:bg-blue-50 transition">
+                    Daftar Sekarang
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-slate-950 text-white">
+
+        <div class="max-w-7xl mx-auto px-6 py-14">
+
+            <div class="grid md:grid-cols-4 gap-10">
+
+                <!-- Footer About -->
+                <section class="md:col-span-2">
+
+                    <div class="flex items-center gap-2">
+
+                        <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-bold">
+                            E
+                        </div>
+
+                        <h2 class="text-xl font-extrabold">
+                            Edu<span class="text-blue-500">Learn</span>
+                        </h2>
+
+                    </div>
+
+                    <p class="text-slate-400 mt-4 max-w-md leading-relaxed">
+                        Platform pembelajaran online untuk membantu kamu
+                        belajar skill baru dan mencapai tujuanmu.
+                    </p>
+
+                </section>
+
+
+                <!-- Footer Navigation -->
+                <section>
+
+                    <h2 class="font-bold mb-4">
+                        Navigasi
+                    </h2>
+
+                    <nav class="space-y-3 text-sm text-slate-400">
+
+                        <a href="index.html"
+                           class="block hover:text-white">
+                            Beranda
+                        </a>
+
+                        <a href="courses.html"
+                           class="block hover:text-white">
+                            Kursus
+                        </a>
+
+                        <a href="#kategori"
+                           class="block hover:text-white">
+                            Kategori
+                        </a>
+
+                        <a href="#tentang"
+                           class="block hover:text-white">
+                            Tentang
+                        </a>
+
+                    </nav>
+
+                </section>
+
+
+                <!-- Footer Help -->
+                <section>
+
+                    <h2 class="font-bold mb-4">
+                        Bantuan
+                    </h2>
+
+                    <nav class="space-y-3 text-sm text-slate-400">
+
+                        <a href="#"
+                           class="block hover:text-white">
+                            Pusat Bantuan
+                        </a>
+
+                        <a href="#"
+                           class="block hover:text-white">
+                            FAQ
+                        </a>
+
+                        <a href="#"
+                           class="block hover:text-white">
+                            Hubungi Kami
+                        </a>
+
+                    </nav>
+
+                </section>
+
+            </div>
+
+
+            <div class="border-t border-slate-800 mt-12 pt-6 text-center text-sm text-slate-500">
+                © 2026 EduLearn. All rights reserved.
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+

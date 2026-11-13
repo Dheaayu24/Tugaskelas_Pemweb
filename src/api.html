@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Publik - EduLearn</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="api.css">
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-2 font-extrabold text-xl text-slate-900"><span class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center">E</span>EduLearn</a>
+      <div class="hidden sm:flex items-center gap-6 text-sm">
+        <a href="index.html" class="text-slate-600 hover:text-blue-600">Beranda</a>
+        <a href="courses.html" class="text-slate-600 hover:text-blue-600">Kursus</a>
+        <a href="api.html" class="text-blue-600 font-semibold">API Publik</a>
+      </div>
+      <button id="mobileMenuButton" class="sm:hidden rounded-lg border px-3 py-2" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
+    </nav>
+    <div id="mobileMenu" class="hidden sm:hidden px-6 pb-4 flex flex-col gap-3">
+      <a href="index.html">Beranda</a><a href="courses.html">Kursus</a><a href="api.html">API Publik</a>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 py-12">
+    <section class="max-w-3xl mb-10">
+      <p class="text-blue-600 font-bold text-sm uppercase tracking-wider mb-3">Integrasi API</p>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-4">Jelajahi Buku untuk Belajar</h1>
+      <p class="text-slate-600 text-lg">Halaman ini menggunakan Open Library API, sebuah API publik untuk mencari buku berdasarkan judul, penulis, atau topik.</p>
+    </section>
+    <section class="bg-white border border-slate-200 rounded-2xl p-5 md:p-7 shadow-sm mb-8">
+      <form id="bookSearchForm" class="flex flex-col sm:flex-row gap-3">
+        <label for="bookSearchInput" class="sr-only">Cari buku</label>
+        <input id="bookSearchInput" type="search" placeholder="Contoh: programming, science, history..." class="min-w-0 flex-1 rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+        <button id="searchButton" type="submit" class="rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700">Cari Buku</button>
+      </form>
+      <p class="mt-3 text-sm text-slate-500">Sumber data: Open Library Search API. Koneksi internet diperlukan untuk mengambil data.</p>
+    </section>
+    <div class="flex items-center justify-between gap-4 mb-5">
+      <h2 id="resultsHeading" class="text-xl font-bold text-slate-900">Rekomendasi buku</h2>
+      <span id="resultCount" class="text-sm text-slate-500"></span>
+    </div>
+    <div id="statusMessage" class="rounded-xl bg-blue-50 text-blue-800 p-4 mb-6" role="status">Memuat rekomendasi buku...</div>
+    <section id="bookResults" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5" aria-live="polite"></section>
+  </main>
+  <footer class="border-t border-slate-200 bg-white mt-12"><div class="max-w-7xl mx-auto px-6 py-6 text-sm text-slate-500">© 2026 EduLearn · Data buku disediakan oleh Open Library.</div></footer>
+  <script src="api.js"></script>
+</body>
+</html>

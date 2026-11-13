@@ -1,0 +1,9 @@
+html { scroll-behavior: smooth; }
+body { font-family: Inter, Arial, Helvetica, sans-serif; }
+#bookResults article, #bookResults > div { border-radius: 18px; transition: transform .25s ease, box-shadow .25s ease; }
+#bookResults article:hover, #bookResults > div:hover { transform: translateY(-4px); box-shadow: 0 18px 35px rgba(37, 99, 235, .11); }
+#bookSearchInput { background: #fff; }
+#bookSearchInput:focus { outline: none; border-color: #60a5fa; box-shadow: 0 0 0 3px rgba(59, 130, 246, .14); }
+#searchButton { box-shadow: 0 5px 14px rgba(37, 99, 235, .15); transition: background .2s ease, transform .2s ease; }
+#searchButton:hover { transform: translateY(-1px); }
+footer { background: #eff6ff !important; color: #475569 !important; }

@@ -1,0 +1,9 @@
+{
+  "name": "edulearn",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website EduLearn dengan integrasi API publik Open Library",
+  "scripts": {
+    "start": "npx serve src"
+  }
+}

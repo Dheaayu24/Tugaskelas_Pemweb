@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar - EduLearn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="index.html"><span class="brand-icon">E</span><span>Edu<span>Learn</span></span></a><a class="back-link" href="index.html">← Kembali ke beranda</a></header>
+  <main class="auth-layout register-layout">
+    <section class="welcome-panel"><div class="welcome-badge">✦ Mulai perjalananmu</div><h1>Belajar lebih mudah, <span>mulai dari sini.</span></h1><p>Buat akun EduLearn untuk menemukan materi, menjelajahi kursus, dan mengembangkan kemampuanmu.</p><div class="welcome-art" aria-hidden="true"><div class="art-book">✎</div><div class="art-circle"></div><div class="art-card">🎓 <span>Langkah kecil<br><b>menuju tujuan besar</b></span></div></div><div class="trust-line">✓ Gratis untuk memulai &nbsp; ✓ Belajar sesuai ritmemu</div></section>
+    <section class="form-panel"><div class="form-heading"><span class="eyebrow">GABUNG BERSAMA EDULEARN</span><h2>Buat akun baru</h2><p>Isi data berikut untuk mulai belajar.</p></div>
+      <form id="registerForm" novalidate>
+        <label for="fullName">Nama lengkap</label><input id="fullName" name="name" type="text" placeholder="Nama lengkap kamu" autocomplete="name" required minlength="2">
+        <label for="registerEmail">Alamat email</label><input id="registerEmail" name="email" type="email" placeholder="nama@email.com" autocomplete="email" required>
+        <label for="registerPassword">Kata sandi</label><div class="password-wrap"><input id="registerPassword" name="password" type="password" placeholder="Minimal 6 karakter" autocomplete="new-password" required minlength="6"><button type="button" class="toggle-password" data-target="registerPassword" aria-label="Tampilkan kata sandi">Lihat</button></div>
+        <label for="confirmPassword">Konfirmasi kata sandi</label><div class="password-wrap"><input id="confirmPassword" name="confirmPassword" type="password" placeholder="Ulangi kata sandi" autocomplete="new-password" required minlength="6"><button type="button" class="toggle-password" data-target="confirmPassword" aria-label="Tampilkan kata sandi">Lihat</button></div>
+        <label class="check-row terms-row"><input type="checkbox" id="agreeTerms" required> <span>Saya menyetujui penggunaan akun ini untuk demo EduLearn.</span></label>
+        <p class="form-message" id="registerMessage" role="status" aria-live="polite"></p>
+        <button class="primary-btn" type="submit">Buat akun <span>→</span></button>
+      </form>
+      <p class="switch-auth">Sudah punya akun? <a href="login.html">Masuk</a></p><p class="demo-note">Demo frontend: data akun disimpan di browser ini saja.</p>
+    </section>
+  </main>
+  <script src="auth.js"></script>
+</body>
+</html>

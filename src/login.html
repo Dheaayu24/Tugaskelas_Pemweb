@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masuk - EduLearn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="index.html"><span class="brand-icon">E</span><span>Edu<span>Learn</span></span></a><a class="back-link" href="index.html">← Kembali ke beranda</a></header>
+  <main class="auth-layout">
+    <section class="welcome-panel"><div class="welcome-badge">✦ Platform Belajar Online</div><h1>Senang melihatmu <span>kembali!</span></h1><p>Masuk ke akun EduLearn dan lanjutkan perjalanan belajarmu hari ini.</p><div class="welcome-art" aria-hidden="true"><div class="art-book">▤</div><div class="art-circle"></div><div class="art-card">📘 <span>Belajar hal baru<br><b>setiap hari</b></span></div></div><div class="trust-line">✓ Belajar fleksibel &nbsp; ✓ Materi terarah</div></section>
+    <section class="form-panel"><div class="form-heading"><span class="eyebrow">SELAMAT DATANG KEMBALI</span><h2>Masuk ke akunmu</h2><p>Masukkan email dan kata sandi yang terdaftar.</p></div>
+      <form id="loginForm" novalidate>
+        <label for="loginEmail">Alamat email</label><input id="loginEmail" name="email" type="email" placeholder="nama@email.com" autocomplete="email" required>
+        <div class="label-row"><label for="loginPassword">Kata sandi</label><a href="#" id="forgotLink">Lupa kata sandi?</a></div>
+        <div class="password-wrap"><input id="loginPassword" name="password" type="password" placeholder="Masukkan kata sandi" autocomplete="current-password" required minlength="6"><button type="button" class="toggle-password" data-target="loginPassword" aria-label="Tampilkan kata sandi">Lihat</button></div>
+        <label class="check-row"><input type="checkbox" id="rememberMe"> <span>Ingat saya di perangkat ini</span></label>
+        <p class="form-message" id="loginMessage" role="status" aria-live="polite"></p>
+        <button class="primary-btn" type="submit">Masuk <span>→</span></button>
+      </form>
+      <p class="switch-auth">Belum punya akun? <a href="register.html">Daftar sekarang</a></p><p class="demo-note">Demo frontend: akun disimpan di browser ini, bukan server.</p>
+    </section>
+  </main>
+  <script src="auth.js"></script>
+</body>
+</html>
